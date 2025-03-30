@@ -8,3 +8,4 @@ CHALLENGE #1: Tip Calculator
 2. Lifting Up State
 3. Children Props
 4. Reusable Component
+5. Separeted Components
