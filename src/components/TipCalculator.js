@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { BillInput } from "./BillInput";
 import { Output } from "./Output";
-import { Reset } from "./Reset";
+import { Button } from "./Button";
 import { SelectPercentage } from "./SelectPercentage";
 
 export function TipCalculator() {
   const [bill, setBill] = useState("");
   const [percentage1, setPercentage1] = useState(0);
   const [percentage2, setPercentage2] = useState(0);
-
+  // tip computation
   const tip = bill * ((percentage1 + percentage2) / 2 / 100);
 
   function handleReset() {
@@ -26,10 +26,11 @@ export function TipCalculator() {
       <SelectPercentage percentage={percentage2} onSelect={setPercentage2}>
         How did your friend like the service?{" "}
       </SelectPercentage>
+      {/* conditional rendering if the bill is greated than 0 then show the reset button */}
       {bill > 0 && (
         <>
           <Output bill={bill} tip={tip} />
-          <Reset onReset={handleReset} />
+          <Button onClick={handleReset}>Reset</Button>
         </>
       )}
     </div>

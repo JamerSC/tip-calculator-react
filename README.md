@@ -7,5 +7,5 @@ CHALLENGE #1: Tip Calculator
 1. Use State
 2. Lifting Up State
 3. Children Props
-4. Reusable Component
-5. Separeted Components
+4. Reusable Component - select percentage & button
+5. Separated Components

@@ -3,7 +3,7 @@ export function BillInput({ bill, onSetBill }) {
     <div>
       <label>How much was the Bill? </label>
       <input
-        type="text"
+        type="number"
         placeholder="Bill value"
         value={bill}
         onChange={(e) => onSetBill(Number(e.target.value))}
